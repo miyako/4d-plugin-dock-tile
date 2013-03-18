@@ -69,13 +69,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 382906846;
-			PBXWorkspaceStateSaveDate = 382906846;
+			PBXPerProjectTemplateStateSaveDate = 385300934;
+			PBXWorkspaceStateSaveDate = 385300934;
 		};
 		perUserProjectItems = {
 			D1569C2516D2AF4600D18FE6 /* PBXTextBookmark */ = D1569C2516D2AF4600D18FE6 /* PBXTextBookmark */;
-			D1569C2C16D2B12100D18FE6 /* PBXTextBookmark */ = D1569C2C16D2B12100D18FE6 /* PBXTextBookmark */;
 			D1569C3516D2B1E700D18FE6 /* PBXTextBookmark */ = D1569C3516D2B1E700D18FE6 /* PBXTextBookmark */;
+			D164170F16F739D300377EA3 /* PBXTextBookmark */ = D164170F16F739D300377EA3 /* PBXTextBookmark */;
 			D1E2B21F16D2A4C000A7FB6A /* PBXTextBookmark */ = D1E2B21F16D2A4C000A7FB6A /* PBXTextBookmark */;
 		};
 		sourceControlManager = D1E2B1FF16D2A02400A7FB6A /* Source Control */;
@@ -116,7 +116,7 @@
 	};
 	D1392DD313582164004911A5 /* C_PICTURE.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {754, 5694}}";
+			sepNavIntBoundsRect = "{{0, 0}, {754, 5681}}";
 			sepNavSelRange = "{5035, 0}";
 			sepNavVisRange = "{4855, 343}";
 			sepNavWindowFrame = "{{647, 77}, {793, 781}}";
@@ -139,17 +139,17 @@
 		vrLen = 489;
 		vrLoc = 508;
 	};
-	D1569C2C16D2B12100D18FE6 /* PBXTextBookmark */ = {
+	D1569C3516D2B1E700D18FE6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D1392DD313582164004911A5 /* C_PICTURE.cpp */;
 		name = "C_PICTURE.cpp: 264";
 		rLen = 0;
 		rLoc = 5035;
 		rType = 0;
-		vrLen = 345;
-		vrLoc = 4853;
+		vrLen = 343;
+		vrLoc = 4855;
 	};
-	D1569C3516D2B1E700D18FE6 /* PBXTextBookmark */ = {
+	D164170F16F739D300377EA3 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D1392DD313582164004911A5 /* C_PICTURE.cpp */;
 		name = "C_PICTURE.cpp: 264";
