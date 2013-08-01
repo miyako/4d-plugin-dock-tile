@@ -3,7 +3,7 @@
    <appid>&quot;0&quot;</appid>
    <fourdversmin>&quot;9.0.0&quot;</fourdversmin>
    <fourdversmax>&quot;9.0.0&quot;</fourdversmax>
-   <command name="DOCK Bounce" str="20000" topic="9">
+   <command name="DOCK Bounce" str="20000" topic="4">
       <param position="1" k="20000"/>
    </command>
 </application>

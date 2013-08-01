@@ -32,51 +32,29 @@ void CommandDispatcher (int32_t pProcNum, sLONG_PTR *pResult, PackagePtr pParams
 {
 	switch(pProcNum)
 	{
-			// --- App
-			
-		case 1 :
-			APP_HIDE(pResult, pParams);
-			break;
-			
-		case 2 :
-			APP_SHOW(pResult, pParams);
-			break;
-			
-		case 3 :
-			APP_HIDE_OTHERS(pResult, pParams);
-			break;
-			
-		case 4 :
-			APP_SHOW_OTHERS(pResult, pParams);
-			break;
-			
-		case 5 :
-			APP_Is_hidden(pResult, pParams);
-			break;
-			
 			// --- Dock
 			
-		case 6 :
+		case 1 :
 			DOCK_Get_badge(pResult, pParams);
 			break;
 			
-		case 7 :
+		case 2 :
 			DOCK_SET_BADGE(pResult, pParams);
 			break;
 			
-		case 8 :
+		case 3 :
 			DOCK_CANCEL_BOUNCE(pResult, pParams);
 			break;
 			
-		case 9 :
+		case 4 :
 			DOCK_Bounce(pResult, pParams);
 			break;
 			
-		case 10 :
+		case 5 :
 			DOCK_SET_ICON(pResult, pParams);
 			break;
 			
-		case 11 :
+		case 6 :
 			DOCK_Get_icon(pResult, pParams);
 			break;
 			
@@ -156,35 +134,5 @@ void DOCK_Get_icon(sLONG_PTR *pResult, PackagePtr pParams)
 	NSData *data = [[[NSApplication sharedApplication]applicationIconImage] TIFFRepresentation];
 	
 	returnValue.setBytes((const uint8_t*)[data bytes], [data length]);
-	returnValue.setReturn(pResult);
-}
-
-// -------------------------------------- App -------------------------------------
-
-void APP_HIDE(sLONG_PTR *pResult, PackagePtr pParams)
-{
-	[[NSApplication sharedApplication]hide:nil];	
-}
-
-void APP_SHOW(sLONG_PTR *pResult, PackagePtr pParams)
-{
-	[[NSApplication sharedApplication]unhide:nil];	
-}
-
-void APP_HIDE_OTHERS(sLONG_PTR *pResult, PackagePtr pParams)
-{
-	[[NSApplication sharedApplication]hideOtherApplications:nil];	
-}
-
-void APP_SHOW_OTHERS(sLONG_PTR *pResult, PackagePtr pParams)
-{
-	[[NSApplication sharedApplication]unhideAllApplications:nil];	
-}
-
-void APP_Is_hidden(sLONG_PTR *pResult, PackagePtr pParams)
-{
-	C_LONGINT returnValue;
-	
-	returnValue.setIntValue([[NSApplication sharedApplication]isHidden]);	
 	returnValue.setReturn(pResult);
 }
