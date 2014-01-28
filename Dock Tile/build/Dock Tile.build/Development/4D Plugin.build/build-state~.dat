@@ -1,0 +1,703 @@
+T4D Plugin
+v7
+r0
+t412612984.064280
+cCheck dependencies
+cProcessInfoPlistFile "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Info.plist" Info.plist
+cCopyStringsFile "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+cProcessPCH++ "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch.gch" "4D Plugin_Prefix.pch" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPluginAPI.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/4DPluginAPI.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_INTEGER.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_INTEGER.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_LONGINT.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_LONGINT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_REAL.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_REAL.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TEXT.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_TEXT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_TEXT.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_TEXT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_LONGINT.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_LONGINT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_INTEGER.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_INTEGER.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_REAL.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_REAL.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_PICTURE.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_PICTURE.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_BLOB.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_BLOB.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TIME.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_TIME.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_DATE.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_DATE.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_BOOLEAN.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cLd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/MacOS/Dock Tile" normal i386
+cResMergerCollector "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/ResourceManagerResources/Dock Tile.rsrc"
+cResMergerProduct "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Resources/Dock Tile.rsrc"
+cTouch "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle"
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c000000005268AF1D0000000000006B20
+t1382592285
+s27424
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000005268AF1E00000000000066C0
+t1382592286
+s26304
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/4DPluginAPI.cpp
+c000000005089BDDC000000000002B9EB
+t1351204316
+s178667
+i"4DPluginAPI.h"
+i"PrivateTypes.h"
+i"EntryPoints.h"
+i<stdlib.h>
+i<string.h>
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/4DPluginAPI.h
+c0000000050E41463000000000000C643
+t1357124707
+s50755
+i"Flags.h"
+i"PublicTypes.h"
+i<Cocoa/Cocoa.h>
+i"C_TEXT.h"
+i"C_INTEGER.h"
+i"C_LONGINT.h"
+i"C_TIME.h"
+i"C_DATE.h"
+i"C_REAL.h"
+i"C_BLOB.h"
+i"C_PICTURE.h"
+i"C_POINTER.h"
+i"ARRAY_TEXT.h"
+i"ARRAY_INTEGER.h"
+i"ARRAY_LONGINT.h"
+i"ARRAY_REAL.h"
+i"ARRAY_BOOLEAN.h"
+i<windows.h>
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp
+c0000000050695FAA0000000000000AB0
+t1349083050
+s2736
+i"ARRAY_BOOLEAN.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_BOOLEAN.h
+c000000004ECA22FF00000000000002DF
+t1321870079
+s735
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_INTEGER.cpp
+c000000004DA54EE0000000000000099C
+t1302679264
+s2460
+i"ARRAY_INTEGER.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_INTEGER.h
+c000000004DA4060600000000000002D8
+t1302595078
+s728
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_LONGINT.cpp
+c000000004DA54E0D000000000000095C
+t1302679053
+s2396
+i"ARRAY_LONGINT.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_LONGINT.h
+c000000004DA3A79C00000000000002C4
+t1302570908
+s708
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_REAL.cpp
+c000000004DA54F180000000000000993
+t1302679320
+s2451
+i"ARRAY_REAL.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_REAL.h
+c000000004DA4084600000000000002D6
+t1302595654
+s726
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_TEXT.cpp
+c000000005146F5AA0000000000002131
+t1363604906
+s8497
+i"ARRAY_TEXT.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_TEXT.h
+c0000000050F906B20000000000000799
+t1358497458
+s1945
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_BLOB.cpp
+c000000004FC335060000000000001BB3
+t1338193158
+s7091
+i"C_BLOB.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_BLOB.h
+c000000004F9FB80E0000000000000603
+t1335867406
+s1539
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_DATE.cpp
+c000000004ECC48620000000000000814
+t1322010722
+s2068
+i"C_DATE.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_DATE.h
+c000000004E9EC5310000000000000391
+t1319028017
+s913
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_PICTURE.cpp
+c0000000051226C26000000000000229D
+t1361210406
+s8861
+i"C_PICTURE.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_PICTURE.h
+c0000000051226BF300000000000007D9
+t1361210355
+s2009
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_TIME.cpp
+c000000004DAF72C60000000000000291
+t1303343814
+s657
+i"C_TIME.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_TIME.h
+c000000004DAF724F0000000000000228
+t1303343695
+s552
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/EntryPoints.h
+c000000004C159E34000000000000557B
+t1276485172
+s21883
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Flags.h
+c000000004F838069000000000000050C
+t1334018153
+s1292
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/PrivateTypes.h
+c000000004C159E340000000000000ACC
+t1276485172
+s2764
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/PublicTypes.h
+c000000004DBD47920000000000007271
+t1304250258
+s29297
+i<string>
+i<vector>
+i<map>
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/ARRAY_BOOLEAN.h
+c000000004ECA22FF00000000000002DF
+t1321870079
+s735
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/ARRAY_INTEGER.h
+c000000004DA4060600000000000002D8
+t1302595078
+s728
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/ARRAY_LONGINT.h
+c000000004DA3A79C00000000000002C4
+t1302570908
+s708
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/ARRAY_REAL.h
+c000000004DA4084600000000000002D6
+t1302595654
+s726
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/ARRAY_TEXT.h
+c0000000050F906B20000000000000799
+t1358497458
+s1945
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_BLOB.h
+c000000004F9FB80E0000000000000603
+t1335867406
+s1539
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_DATE.h
+c000000004E9EC5310000000000000391
+t1319028017
+s913
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_INTEGER.cpp
+c000000004DA3A77D00000000000002C2
+t1302570877
+s706
+i"C_INTEGER.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_INTEGER.h
+c000000004DA3A777000000000000022A
+t1302570871
+s554
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_LONGINT.cpp
+c000000004DA3A77000000000000002A3
+t1302570864
+s675
+i"C_LONGINT.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_LONGINT.h
+c000000004DA3A76A0000000000000235
+t1302570858
+s565
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_PICTURE.h
+c0000000051226BF300000000000007D9
+t1361210355
+s2009
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_POINTER.h
+c0000000050E8F1980000000000000276
+t1357443480
+s630
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_REAL.cpp
+c000000004DA3A76100000000000002B1
+t1302570849
+s689
+i"C_REAL.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_REAL.h
+c000000004DA3A75B0000000000000237
+t1302570843
+s567
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_TEXT.cpp
+c000000005146F5C600000000000017A1
+t1363604934
+s6049
+i"C_TEXT.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_TEXT.h
+c0000000050F8CBFD0000000000000644
+t1358482429
+s1604
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_TIME.h
+c000000004DAF724F0000000000000228
+t1303343695
+s552
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin_Prefix.pch
+c000000004D419E1B0000000000000081
+t1296145947
+s129
+i<Carbon/Carbon.h>
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.cpp
+c0000000051F9BB4B0000000000000C70
+t1375320907
+s3184
+i"4DPluginAPI.h"
+i"4DPlugin.h"
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.h
+c0000000051F9BB1F00000000000002AD
+t1375320863
+s685
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.rsrc
+c0000000052E7C1670000000000000292
+t1390920039
+s658
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle
+t1390920184
+s102
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Info.plist
+t1361209720
+s1058
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/MacOS/Dock Tile
+t1390920184
+s537564
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Resources/Dock Tile.rsrc
+t1390920184
+s658
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Resources/English.lproj/InfoPlist.strings
+t1361212745
+s366
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/English.lproj/InfoPlist.strings
+c00000000512268C6000000000000016E
+t1361209542
+s366
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o
+t1390920182
+s96576
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPluginAPI.o
+t1390920183
+s336124
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_BOOLEAN.o
+t1390920183
+s84868
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_INTEGER.o
+t1390920183
+s103620
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_LONGINT.o
+t1390920182
+s101084
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_REAL.o
+t1390920183
+s102520
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_TEXT.o
+t1390920183
+s308540
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_BLOB.o
+t1390920183
+s190924
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_DATE.o
+t1390920183
+s25696
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_INTEGER.o
+t1390920182
+s20172
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_LONGINT.o
+t1390920182
+s20132
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_PICTURE.o
+t1390920183
+s247572
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_REAL.o
+t1390920182
+s20212
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TEXT.o
+t1390920182
+s190080
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TIME.o
+t1390920183
+s20012
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/Dock Tile.LinkFileList
+c0000000052E7C1F50000000000000845
+t1390920181
+s2117
+
+N/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/ResourceManagerResources/Dock Tile.rsrc
+t1390920184
+s658
+
+N/Xcode3/SDKs/MacOSX10.5.sdk
+c000000004C238B9B00000000000000EE
+t1277397915
+s238
+
+N/Xcode3/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+c000000004864BE3E00000000000005D7
+t1214561854
+s1495
+
+N/Xcode3/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Xcode3/SDKs/MacOSX10.5.sdk/usr/include/stdlib.h
+c0000000047BA99310000000000002A79
+t1203411249
+s10873
+
+N/Xcode3/SDKs/MacOSX10.5.sdk/usr/include/string.h
+c0000000047BA99320000000000001731
+t1203411250
+s5937
+
+N/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch.gch
+t1390919819
+s59173168
+
+NInfo.plist
+c00000000512268BA0000000000000292
+t1361209530
+s658
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies412612981#412612981#0(0"0(0#1#0"17205431296#0"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612981.517707
+e412612982.446633
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@78"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.cpp412612981#412612982#0(0"0(0#0#70"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.cpp4317954048#1379"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPluginAPI.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/4DPluginAPI.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612981.515311
+e412612983.706249
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPluginAPI.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/4DPluginAPI.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/4DPluginAPI.cpp412612981#412612983#0(0"0(0#0#87"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/4DPluginAPI.cpp17206503424#1382"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/4DPluginAPI.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/4DPluginAPI.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_BOOLEAN.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612983.020774
+e412612983.960628
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_BOOLEAN.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@105"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp412612983#412612983#0(0"0(0#0#97"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp4317954048#1394"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_BOOLEAN.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_INTEGER.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_INTEGER.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612982.377201
+e412612983.593080
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_INTEGER.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_INTEGER.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@105"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_INTEGER.cpp412612982#412612983#0(0"0(0#0#97"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_INTEGER.cpp4317954048#1394"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_INTEGER.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_INTEGER.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_LONGINT.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_LONGINT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612981.521865
+e412612982.594948
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_LONGINT.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_LONGINT.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@105"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_LONGINT.cpp412612981#412612982#0(0"0(0#0#97"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_LONGINT.cpp4317954048#1394"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_LONGINT.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_LONGINT.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_REAL.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_REAL.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612982.380834
+e412612983.606215
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_REAL.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_REAL.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@102"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_REAL.cpp412612982#412612983#0(0"0(0#0#94"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_REAL.cpp4317954048#1388"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_REAL.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_REAL.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_TEXT.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_TEXT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612981.520988
+e412612983.020563
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_TEXT.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_TEXT.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@102"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_TEXT.cpp412612981#412612983#0(0"0(0#0#94"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_TEXT.cpp4317954048#1388"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/ARRAY_TEXT.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/ARRAY_TEXT.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_BLOB.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_BLOB.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612982.446776
+e412612983.814238
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_BLOB.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_BLOB.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@98"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_BLOB.cpp412612982#412612983#0(0"0(0#0#90"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_BLOB.cpp4317954048#1380"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_BLOB.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_BLOB.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_DATE.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_DATE.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612982.767355
+e412612983.705539
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_DATE.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_DATE.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@98"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_DATE.cpp412612982#412612983#0(0"0(0#0#90"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_DATE.cpp4317954048#1380"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_DATE.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_DATE.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_INTEGER.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_INTEGER.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612981.518292
+e412612982.376987
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_INTEGER.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_INTEGER.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@101"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_INTEGER.cpp412612981#412612982#0(0"0(0#0#93"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_INTEGER.cpp4317954048#1386"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_INTEGER.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_INTEGER.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_LONGINT.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_LONGINT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612981.518824
+e412612982.380674
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_LONGINT.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_LONGINT.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@101"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_LONGINT.cpp412612981#412612982#0(0"0(0#0#93"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_LONGINT.cpp4317954048#1386"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_LONGINT.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_LONGINT.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_PICTURE.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_PICTURE.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612982.384400
+e412612983.789241
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_PICTURE.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_PICTURE.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@101"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_PICTURE.cpp412612982#412612983#0(0"0(0#0#93"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_PICTURE.cpp4317954048#1386"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_PICTURE.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_PICTURE.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_REAL.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_REAL.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612981.519403
+e412612982.384239
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_REAL.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_REAL.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@98"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_REAL.cpp412612981#412612982#0(0"0(0#0#90"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_REAL.cpp4317954048#1380"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_REAL.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_REAL.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TEXT.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_TEXT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612981.520185
+e412612982.767211
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TEXT.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_TEXT.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@98"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_TEXT.cpp412612981#412612982#0(0"0(0#0#90"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_TEXT.cpp4317954048#1380"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/classes/C_TEXT.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TEXT.o"0#
+
+CCompileC "build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TIME.o" "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_TIME.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s412612982.595099
+e412612983.582026
+r1
+xCompileC
+xbuild/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TIME.o
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_TIME.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@98"Compile /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_TIME.cpp412612982#412612983#0(0"0(0#0#90"/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_TIME.cpp4317954048#1380"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -isysroot /Xcode3/SDKs/MacOSX10.5.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Dock Tile.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4D Plugin API/Classes/C_TIME.cpp" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/C_TIME.o"0#
+
+CCopyStringsFile "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+r0
+
+CLd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/MacOS/Dock Tile" normal i386
+s412612983.960701
+e412612984.025609
+r1
+xLd
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/MacOS/Dock Tile
+xnormal
+xi386
+lSLF07#2@129"Link /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/MacOS/Dock Tile412612983#412612984#0(0"0(0#0#0"4317954048#721"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Xcode3/usr/bin/g++-4.2 -arch i386 -bundle -isysroot /Xcode3/SDKs/MacOSX10.5.sdk "-L/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" "-F/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins" -filelist "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/Objects-normal/i386/Dock Tile.LinkFileList" -mmacosx-version-min=10.5 -framework Carbon -framework Cocoa -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/MacOS/Dock Tile"0#
+
+CProcessInfoPlistFile "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Info.plist" Info.plist
+r0
+
+CProcessPCH++ "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-fpklumguhuiswpdhzolbwdvsdqhi/4D Plugin_Prefix.pch.gch" "4D Plugin_Prefix.pch" normal i386 objective-c++ com.apple.compilers.gcc.4_2
+r0
+
+CResMergerCollector "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/ResourceManagerResources/Dock Tile.rsrc"
+s412612984.025752
+e412612984.042787
+r1
+xResMergerCollector
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/ResourceManagerResources/Dock Tile.rsrc
+lSLF07#2@168"Merge resources into /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/ResourceManagerResources/Dock Tile.rsrc412612984#412612984#0(0"0(0#0#0"4317954048#332"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    /Xcode3/Tools/ResMerger -dstIs DF "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/4DPlugin.rsrc" -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/ResourceManagerResources/Dock Tile.rsrc"0#
+
+CResMergerProduct "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Resources/Dock Tile.rsrc"
+s412612984.042855
+e412612984.060094
+r1
+xResMergerProduct
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Resources/Dock Tile.rsrc
+lSLF07#2@154"Merge resources into /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Resources/Dock Tile.rsrc412612984#412612984#0(0"0(0#0#0"4317954048#394"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    /Xcode3/Tools/ResMerger "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/build/Dock Tile.build/Development/4D Plugin.build/ResourceManagerResources/Dock Tile.rsrc" -dstIs DF -o "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle/Contents/Resources/Dock Tile.rsrc"0#
+
+CTouch "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle"
+s412612984.060159
+e412612984.064247
+r1
+xTouch
+x/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle
+lSLF07#2@105"Touch /Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle412612984#412612984#0(0"0(0#0#0"4317954048#191"    cd "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile"    /usr/bin/touch -c "/Users/miyako/github-miyako/4d-plugin-dock-tile/Dock Tile/Dock Tile.4dbase/Plugins/Dock Tile.bundle"0#
+
