@@ -13,7 +13,7 @@ To resize the window to touch the Dock.
 ```
 DOCK GET SCREEN FRAME ($x;$y;$width;$height)
 
-$offsetY:=102  //v13
+$offsetY:=102  //Design Mode Tool Bar
 
 SET WINDOW RECT($x;$offsetY;$x+$width;$height+Menu bar height;Frontmost window)
 ```
