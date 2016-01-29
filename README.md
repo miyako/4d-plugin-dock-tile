@@ -3,8 +3,28 @@
 
 This plugins allows 4D to control the dock tile.
 
-4D Cocoa OS X 10.8+(32/64)  
-4D Carbon OS X 10.6+ (32)
+##Platform
+
+| carbon | cocoa | win32 | win64 |
+|:------:|:-----:|:---------:|:---------:|
+|🆗|🆗|🚫|🚫|
+
+Commands
+---
+
+```c
+// --- Dock
+DOCK_Get_badge
+DOCK_SET_BADGE
+DOCK_CANCEL_BOUNCE
+DOCK_Bounce
+DOCK_SET_ICON
+DOCK_Get_icon
+
+// --- Size
+DOCK_GET_SIZE
+DOCK_GET_SCREEN_FRAME
+```
 
 Example
 -------
