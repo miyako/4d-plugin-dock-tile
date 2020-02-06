@@ -1,5 +1,4 @@
 # 4d-plugin-dock-tile
-===================
 
 Control the dock tile.
 
