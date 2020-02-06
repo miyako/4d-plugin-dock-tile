@@ -10,7 +10,7 @@ Control the dock tile.
 
 ### Version
 
-<img width="32" height="32" src="https://user-images.githubusercontent.com/1725068/73986501-15964580-4981-11ea-9ac1-73c5cee50aae.png"> <img src="https://user-images.githubusercontent.com/1725068/73987157-ce10b900-4982-11ea-95cd-8f034b1589ca.png" width="32" height="32" />
+<img width="32" height="32" src="https://user-images.githubusercontent.com/1725068/73986501-15964580-4981-11ea-9ac1-73c5cee50aae.png"> <img src="https://user-images.githubusercontent.com/1725068/73987486-ec2ae900-4983-11ea-8102-cbd213310fb6.png" width="32" height="32" />
 
 Commands
 ---
