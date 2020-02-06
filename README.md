@@ -13,7 +13,7 @@ Control the dock tile.
 
 <img src="https://user-images.githubusercontent.com/1725068/41266195-ddf767b2-6e30-11e8-9d6b-2adf6a9f57a5.png" width="32" height="32" />
 
-![Apple-Notarized-App-Service-logo-icon](https://user-images.githubusercontent.com/1725068/73900022-bf1dfe00-48d1-11ea-81a7-b715a8e7206c.jpg)
+<img src="https://user-images.githubusercontent.com/1725068/73900128-1c19b400-48d2-11ea-9979-f5c6acaac8d4.png" width="32" height="32" />
 
 Commands
 ---
