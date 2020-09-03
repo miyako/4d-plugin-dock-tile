@@ -1,6 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <xliff version="1.0" xmlns:d4="http://www.4d.com/d4-ns">
     <header>
         <note>Dock Tile</note>
     </header>
+    <group resname="themes">
+        <trans-unit id="" resname="B96149328AD24F8394CE858F9E4C0ABE" translate="no">
+            <source>Dock Bounce Option</source>
+        </trans-unit>
+    </group>
+    <group restype="x-4DK#" d4:groupName="B96149328AD24F8394CE858F9E4C0ABE">
+        <trans-unit d4:value="10" id="B96149328AD24F8394CE858F9E4C0ABE.1">
+            <source>Dock_Bounce_One_Second</source>
+        </trans-unit>
+        <trans-unit d4:value="1" id="B96149328AD24F8394CE858F9E4C0ABE.2">
+            <source>Dock_Bounce_Indefinite</source>
+        </trans-unit>
+    </group>
 </xliff>

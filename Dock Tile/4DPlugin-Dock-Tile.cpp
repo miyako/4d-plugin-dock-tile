@@ -18,33 +18,45 @@ void PluginMain(PA_long32 selector, PA_PluginParameters params) {
 	{
         switch(selector)
         {
+            case kDeinitPlugin :/* main thread */
+            case kServerDeinitPlugin:
+                [[NSApp dockTile] setBadgeLabel:nil];
+                break;
+                
 			// --- Dock Tile
             
 			case 1 :
-				DOCK_Get_badge(params);
+                PA_RunInMainProcess((PA_RunInMainProcessProcPtr)DOCK_Get_badge, params);
+//				DOCK_Get_badge(params);
 				break;
 			case 2 :
-				DOCK_SET_BADGE(params);
+                PA_RunInMainProcess((PA_RunInMainProcessProcPtr)DOCK_SET_BADGE, params);
+//				DOCK_SET_BADGE(params);
 				break;
 			case 3 :
-				DOCK_CANCEL_BOUNCE(params);
+                PA_RunInMainProcess((PA_RunInMainProcessProcPtr)DOCK_CANCEL_BOUNCE, params);
+//				DOCK_CANCEL_BOUNCE(params);
 				break;
 			case 4 :
-				DOCK_Bounce(params);
+                PA_RunInMainProcess((PA_RunInMainProcessProcPtr)DOCK_Bounce, params);
+//				DOCK_Bounce(params);
 				break;
 			case 5 :
-				DOCK_SET_ICON(params);
+                PA_RunInMainProcess((PA_RunInMainProcessProcPtr)DOCK_SET_ICON, params);
+//				DOCK_SET_ICON(params);
 				break;
 			case 6 :
-				DOCK_Get_icon(params);
+                PA_RunInMainProcess((PA_RunInMainProcessProcPtr)DOCK_Get_icon, params);
+//				DOCK_Get_icon(params);
 				break;
 			case 7 :
-				DOCK_GET_SIZE(params);
+                PA_RunInMainProcess((PA_RunInMainProcessProcPtr)DOCK_GET_SIZE, params);
+//				DOCK_GET_SIZE(params);
 				break;
 			case 8 :
-				DOCK_GET_SCREEN_FRAME(params);
+                PA_RunInMainProcess((PA_RunInMainProcessProcPtr)DOCK_GET_SCREEN_FRAME, params);
+//				DOCK_GET_SCREEN_FRAME(params);
 				break;
-
         }
 
 	}
@@ -74,12 +86,13 @@ void DOCK_SET_BADGE(PA_PluginParameters params) {
 
     Param1.fromParamAtIndex(pParams, 1);
     
-    NSDockTile *dockTile = [[NSApplication sharedApplication]dockTile];
+    NSDockTile *dockTile = [NSApp dockTile];
     
     if(Param1.getUTF16Length())
     {
         NSString *badgeLabel = Param1.copyUTF16String();
         [dockTile setBadgeLabel:badgeLabel];
+        [dockTile display];
         [badgeLabel release];
     }else{
         [dockTile setBadgeLabel:nil];
@@ -118,10 +131,28 @@ void DOCK_SET_ICON(PA_PluginParameters params) {
 
 void DOCK_Get_icon(PA_PluginParameters params) {
 
-    NSData *data = [[[NSApplication sharedApplication]applicationIconImage]TIFFRepresentation];
-    PA_Picture icon = PA_CreatePicture((void *)[data bytes],
-                                       (PA_long32)[data length]);
-    PA_ReturnPicture(params, icon);
+    sLONG_PTR *pResult = (sLONG_PTR *)params->fResult;
+    
+    NSImage * icon = [[NSApplication sharedApplication]applicationIconImage];
+    if(icon) {
+
+        NSRect imageRect = NSMakeRect(0, 0,
+                                      icon.size.width,
+                                      icon.size.height);
+        CGImageRef image = [icon CGImageForProposedRect:(NSRect *)&imageRect context:NULL hints:NULL];
+        CFMutableDataRef data = CFDataCreateMutable(kCFAllocatorDefault, 0);
+        CGImageDestinationRef destination = CGImageDestinationCreateWithData(data, kUTTypeTIFF, 1, NULL);
+        CFMutableDictionaryRef properties = CFDictionaryCreateMutable(kCFAllocatorDefault, 0, NULL, NULL);
+        CGImageDestinationAddImage(destination, image, properties);
+        CGImageDestinationFinalize(destination);
+        PA_Picture picture = PA_CreatePicture((void *)CFDataGetBytePtr(data), (PA_long32)CFDataGetLength(data));
+        *(PA_Picture*) pResult = picture;
+        CFRelease(destination);
+        CFRelease(properties);
+        CFRelease(data);
+        
+    }
+
 }
 
 void DOCK_GET_SIZE(PA_PluginParameters params) {
