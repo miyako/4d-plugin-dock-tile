@@ -12,8 +12,7 @@ Control the dock tile.
 
 <img width="32" height="32" src="https://user-images.githubusercontent.com/1725068/73986501-15964580-4981-11ea-9ac1-73c5cee50aae.png"> <img src="https://user-images.githubusercontent.com/1725068/73987971-db2ea780-4984-11ea-8ada-e25fb9c3cf4e.png" width="32" height="32" />
 
-Commands
----
+### Commands
 
 ```c
 // --- Dock
@@ -29,15 +28,16 @@ DOCK_GET_SIZE
 DOCK_GET_SCREEN_FRAME
 ```
 
-#### Remarks
+### Remarks
 
 Badge notofication can be disabled in system settings.
 
 <img width="668" alt="badge" src="https://user-images.githubusercontent.com/1725068/92133614-8b915b00-ee43-11ea-96e3-ab222be0fb72.png">
 
+The badge is automatically removed when the plugin is unloaded.
 
-Example
--------
+### Examples
+
 To resize the window to touch the Dock.
 
 ```
