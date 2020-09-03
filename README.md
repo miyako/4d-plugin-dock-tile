@@ -29,6 +29,13 @@ DOCK_GET_SIZE
 DOCK_GET_SCREEN_FRAME
 ```
 
+#### Remarks
+
+Badge notofication can be disabled in system settings.
+
+<img width="668" alt="badge" src="https://user-images.githubusercontent.com/1725068/92133614-8b915b00-ee43-11ea-96e3-ab222be0fb72.png">
+
+
 Example
 -------
 To resize the window to touch the Dock.
