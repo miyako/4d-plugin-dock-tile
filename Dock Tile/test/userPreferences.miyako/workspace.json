@@ -2,14 +2,29 @@
 	"editors": [
 		{
 			"type": "method",
+			"id": 2147483637,
+			"codeDescriptor": {
+				"type": 2,
+				"formName": "フォーム1",
+				"objectName": "Input",
+				"methodPath": "/SOURCES/Forms/フォーム1/ObjectMethods/Input.4dm"
+			}
+		},
+		{
+			"type": "form",
+			"id": 401,
+			"formName": "フォーム1"
+		},
+		{
+			"type": "explorer"
+		},
+		{
+			"type": "method",
 			"id": 2147483642,
 			"codeDescriptor": {
 				"type": 1,
 				"methodName": "TEST"
 			}
-		},
-		{
-			"type": "explorer"
 		}
 	]
 }

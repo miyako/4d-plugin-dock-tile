@@ -171,10 +171,10 @@
 		"stamp": "2019-07-02T23:15:40.975Z"
 	},
 	"Sources/Methods/TEST.4dm": {
-		"startSelection": 20,
-		"endSelection": 20,
-		"firstSelectedLine": 0,
-		"lastSelectedLine": 0,
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 5,
+		"lastSelectedLine": 5,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2020-09-03T15:19:02.519Z"
@@ -196,5 +196,14 @@
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2019-12-13T04:37:40.619Z"
+	},
+	"Sources/Forms/フォーム1/ObjectMethods/Input.4dm": {
+		"startSelection": 44,
+		"endSelection": 44,
+		"firstSelectedLine": 0,
+		"lastSelectedLine": 0,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2020-09-03T15:48:02.387Z"
 	}
 }
