@@ -41,6 +41,11 @@
             "theme": "Size",
             "syntax": "DOCK GET SCREEN FRAME(&8;&8;&8;&8)",
             "threadSafe": true
+        },
+        {
+            "theme": "Dock",
+            "syntax": "DOCK SET PROGRESS(&8;&J)",
+            "threadSafe": true
         }
     ]
 }
