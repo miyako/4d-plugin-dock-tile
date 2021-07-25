@@ -46,6 +46,11 @@
             "theme": "Dock",
             "syntax": "DOCK SET PROGRESS(&8;&J)",
             "threadSafe": true
+        },
+        {
+            "theme": "Dock",
+            "syntax": "DOCK MENU(&J)",
+            "threadSafe": true
         }
     ]
 }

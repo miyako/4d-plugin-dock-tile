@@ -62,6 +62,9 @@ void PluginMain(PA_long32 selector, PA_PluginParameters params) {
             case 9 :
                 DOCK_SET_PROGRESS(params);
                 break;
+            case 10 :
+                DOCK_MENU(params);
+                break;
         }
 
 	}
@@ -224,6 +227,66 @@ void DOCK_SET_PROGRESS(PA_PluginParameters params) {
             ((NSImageView *)NSApp.dockTile.contentView).image = draw(NSApp.applicationIconImage, progress, drawOptions);
         }
         [NSApp.dockTile display];
+    });
+    
+}
+
+#import <objc/objc-class.h>
+@interface DockDelegate : NSObject
++ (id)shared;
+- (void) menuItemAction:(NSMenuItem *)sender;
+- (NSMenu *)applicationDockMenu:(NSApplication *)sender;
+@end
+@implementation DockDelegate
++ (id)shared {
+    static DockDelegate *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (void) menuItemAction:(NSMenuItem *)sender
+{
+    NSLog(@"Menu Item Action");
+    // TODO execute sender method with name [sender representedObject]
+    // in a thread that 4D could execute it
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        PA_Unichar length[] = { 'T', 'E', 'S', 'T','(',')', 0 };
+        PA_Unistring key = PA_CreateUnistring(&length[0]);
+        PA_ExecuteMethod(&key);
+    });
+}
+
+- (NSMenu *)applicationDockMenu:(NSApplication *)sender
+{
+    NSMenu *menu = [[[NSMenu alloc] initWithTitle:@"dock app menu"] autorelease];
+    [menu setAutoenablesItems: NO];
+    
+    // TODO create menu according to DOCK MENU object parameters
+    NSMenuItem *item = [[[NSMenuItem alloc] initWithTitle:@"My method" action: @selector(menuItemAction:) keyEquivalent:@""] autorelease];
+    [item setEnabled: YES];
+    [item setTarget: [DockDelegate shared]];
+    [item setRepresentedObject: @"quit"]; // TODO add here data from params, ie. 4d method name
+    [menu addItem: item];
+
+    return menu;
+}
+
+@end
+
+void DOCK_MENU(PA_PluginParameters params) {
+    // TODO read params as object to build menu item, set data in [DockDelegate shared]
+    PA_ObjectRef options = PA_GetObjectParameter(params, 1);
+    if (ob_is_defined(options, L"items")) {
+        // convert to struct the array of object
+    }
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        Method delegateMethod = class_getInstanceMethod(objc_getClass("DockDelegate"), @selector(applicationDockMenu:));
+        IMP imp = method_getImplementation(delegateMethod);
+        class_addMethod([[[NSApplication sharedApplication] delegate] class], @selector(applicationDockMenu:), imp, method_getTypeEncoding(delegateMethod));
     });
 }
 

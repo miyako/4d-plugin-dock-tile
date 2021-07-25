@@ -26,6 +26,7 @@ void DOCK_Get_icon(PA_PluginParameters params);
 void DOCK_GET_SIZE(PA_PluginParameters params);
 void DOCK_GET_SCREEN_FRAME(PA_PluginParameters params);
 void DOCK_SET_PROGRESS(PA_PluginParameters params);
+void DOCK_MENU(PA_PluginParameters params);
 
 // draw progress
 
