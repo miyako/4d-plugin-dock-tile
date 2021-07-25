@@ -25,5 +25,23 @@ void DOCK_SET_ICON(PA_PluginParameters params);
 void DOCK_Get_icon(PA_PluginParameters params);
 void DOCK_GET_SIZE(PA_PluginParameters params);
 void DOCK_GET_SCREEN_FRAME(PA_PluginParameters params);
+void DOCK_SET_PROGRESS(PA_PluginParameters params);
+
+// draw progress
+
+typedef NS_ENUM(NSUInteger, DockIconProgressType) {
+    DockIconProgressBar = 0,
+    DockIconProgressCircle = 1,
+    DockIconProgressSquircle = 2
+};
+typedef struct DrawOptions {
+    DockIconProgressType type = DockIconProgressBar;
+    CGFloat lineWidth = 0;
+    CGFloat radius = 0;
+    CGFloat inset = 0;
+    NSColor* color = NSColor.whiteColor;
+} DrawOptions;
+
+NSImage* draw(NSImage* appIcon, CGFloat progress, DrawOptions options);
 
 #endif /* PLUGIN_DOCK_TILE_H */

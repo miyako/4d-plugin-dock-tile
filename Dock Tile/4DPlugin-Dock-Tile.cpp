@@ -9,6 +9,8 @@
  # --------------------------------------------------------------------------------*/
 
 #include "4DPlugin-Dock-Tile.h"
+#include "4DPlugin-JSON.h"
+#include "NSBezierPath+DockTile.h"
 
 #pragma mark -
 
@@ -57,6 +59,9 @@ void PluginMain(PA_long32 selector, PA_PluginParameters params) {
                 PA_RunInMainProcess((PA_RunInMainProcessProcPtr)DOCK_GET_SCREEN_FRAME, params);
 //				DOCK_GET_SCREEN_FRAME(params);
 				break;
+            case 9 :
+                DOCK_SET_PROGRESS(params);
+                break;
         }
 
 	}
@@ -173,4 +178,123 @@ void DOCK_GET_SCREEN_FRAME(PA_PluginParameters params) {
     PA_SetDoubleParameter(params, 2, rect.origin.y);
     PA_SetDoubleParameter(params, 3, rect.size.width);
     PA_SetDoubleParameter(params, 4, rect.size.height);
+}
+
+void DOCK_SET_PROGRESS(PA_PluginParameters params) {
+    CGFloat progress = (CGFloat) PA_GetDoubleParameter(params, 1);
+    PA_ObjectRef options = PA_GetObjectParameter(params, 2);
+
+    // read options out of main thread
+    DrawOptions drawOptions;
+    if (options) {
+        drawOptions.type =  (DockIconProgressType) ob_get_n(options, L"style");
+        if (ob_is_defined(options, L"lineWidth")) {
+            drawOptions.lineWidth = ob_get_n(options, L"lineWidth");
+        }
+        if (ob_is_defined(options, L"radius")) {
+            drawOptions.radius = ob_get_n(options, L"radius");
+        }
+        if (ob_is_defined(options, L"inset")) {
+            drawOptions.inset = ob_get_n(options, L"inset");
+        }
+        if (ob_is_defined(options, L"color")) {
+            PA_ObjectRef optionColor = ob_get_o(options, L"color");
+            if(optionColor) {
+                CGFloat r, g, b, a;
+                r = ob_get_n(optionColor, L"red");
+                g = ob_get_n(optionColor, L"green");
+                b = ob_get_n(optionColor, L"blue");
+                if (ob_is_defined(optionColor, L"alpha")) {
+                    a = ob_get_n(optionColor, L"alpha");
+                } else {
+                    a = 1;
+                }
+                drawOptions.color = [NSColor colorWithRed:r green:g blue:b alpha:a];
+            }
+        }
+    }
+    // change app icon by drawing on it
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (![NSApp.dockTile.contentView isKindOfClass: [NSImageView class]]) {
+            NSApp.dockTile.contentView = [[NSImageView alloc] init];
+        }
+        if (progress <= 0 || progress>=1) {
+            ((NSImageView *)NSApp.dockTile.contentView).image = NSApp.applicationIconImage;
+        } else {
+            ((NSImageView *)NSApp.dockTile.contentView).image = draw(NSApp.applicationIconImage, progress, drawOptions);
+        }
+        [NSApp.dockTile display];
+    });
+}
+
+// MARK:- draw
+
+void drawProgressBar(NSRect dstRect, CGFloat progress, DrawOptions options) {
+    if (options.lineWidth<=0) {
+        options.lineWidth = 10;
+    }
+
+    NSRect bar = CGRectMake(0, 20, dstRect.size.width, options.lineWidth);
+    [[options.color colorWithAlphaComponent: 0.8f] set];
+    [[NSBezierPath bezierPathWithRoundedRect: bar xRadius: bar.size.height / 2 yRadius: bar.size.height] fill];
+
+    NSRect barInnerBg = CGRectInset(bar, 0.5, 0.5);
+    [[[NSColor blackColor] colorWithAlphaComponent: 0.8f] set];
+    [[NSBezierPath bezierPathWithRoundedRect: barInnerBg xRadius: barInnerBg.size.height / 2 yRadius: barInnerBg.size.height / 2] fill];
+
+    NSRect barProgress = CGRectInset(bar, 1, 1);
+    barProgress.size.width = barProgress.size.width * CGFloat(progress);
+    [options.color set];
+    [[NSBezierPath bezierPathWithRoundedRect: barProgress xRadius: barProgress.size.height / 2 yRadius: barProgress.size.height / 2] fill];
+}
+
+void drawProgressCircle(NSRect dstRect, CGFloat progress, DrawOptions options) {
+    if (options.radius<=0) {
+        options.radius = 30.0f;
+    }
+    if (options.lineWidth<=0) {
+        options.lineWidth = 4;
+    }
+
+    ProgressCircleShapeLayer* progressCircle = [[ProgressCircleShapeLayer alloc] initWithRadius:options.radius center: CGPointMake(CGRectGetMidX(dstRect), CGRectGetMidY(dstRect))];
+    progressCircle.strokeColor = options.color.CGColor;
+    progressCircle.lineWidth = options.lineWidth;
+    [progressCircle setProgress: progress];
+    [progressCircle renderInContext: [NSGraphicsContext.currentContext CGContext]];
+}
+
+void drawProgressSquircle(NSRect dstRect, CGFloat progress, DrawOptions options) {
+    CGFloat defaultInset = 14.4;
+    NSRect rect = CGRectInset(dstRect, defaultInset, defaultInset);
+    if (options.inset>0) {
+        rect = CGRectInset(rect, options.inset, options.inset);
+    }
+    if (options.lineWidth<=0) {
+        options.lineWidth = 5;
+    }
+
+    ProgressSquircleShapeLayer* progressSquircle = [[ProgressSquircleShapeLayer alloc] initWithRect: rect];
+    progressSquircle.strokeColor = options.color.CGColor;
+    progressSquircle.lineWidth = options.lineWidth;
+    [progressSquircle setProgress: progress];
+    [progressSquircle renderInContext: [NSGraphicsContext.currentContext CGContext]];
+}
+
+NSImage* draw(NSImage* appIcon, CGFloat progress, DrawOptions options) {
+    return [NSImage imageWithSize:appIcon.size flipped:NO drawingHandler:^BOOL(NSRect dstRect) {
+        NSGraphicsContext.currentContext.imageInterpolation = NSImageInterpolationHigh;
+        [appIcon drawInRect:dstRect];
+        switch(options.type) {
+            case DockIconProgressBar:
+                drawProgressBar(dstRect, progress, options);
+                break;
+            case DockIconProgressCircle:
+                drawProgressCircle(dstRect, progress, options);
+                break;
+            case DockIconProgressSquircle:
+                drawProgressSquircle(dstRect, progress, options);
+                break;
+        }
+        return YES;
+    }];
 }
