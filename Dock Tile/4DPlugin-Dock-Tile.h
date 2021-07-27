@@ -12,7 +12,6 @@
 #define PLUGIN_DOCK_TILE_H
 
 #include "4DPluginAPI.h"
-#include "C_TEXT.h"
 #import <Cocoa/Cocoa.h>
 
 #pragma mark -
@@ -26,7 +25,7 @@ void DOCK_Get_icon(PA_PluginParameters params);
 void DOCK_GET_SIZE(PA_PluginParameters params);
 void DOCK_GET_SCREEN_FRAME(PA_PluginParameters params);
 void DOCK_SET_PROGRESS(PA_PluginParameters params);
-void DOCK_MENU(PA_PluginParameters params);
+void DOCK_SET_MENU(PA_PluginParameters params);
 
 // draw progress
 
