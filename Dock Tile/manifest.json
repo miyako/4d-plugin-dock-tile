@@ -49,7 +49,7 @@
         },
         {
             "theme": "Dock",
-            "syntax": "DOCK MENU(&J)",
+            "syntax": "DOCK SET MENU(&J)",
             "threadSafe": true
         }
     ]
