@@ -1,0 +1,10 @@
+.DS_Store
+build/
+test/Data/Logs/
+test/Logs/
+test/userPreferences.*/
+test/Project/DerivedData/
+/Dock Tile.dmg
+/Dock Tile.zip
+test/Plugins/Dock Tile.bundle/Contents/MacOS/
+test/Plugins/Dock Tile.bundle/Contents/_CodeSignature/
