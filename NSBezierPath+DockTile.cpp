@@ -82,9 +82,17 @@
      [path appendBezierPathWithArcWithCenter:center radius:radius startAngle:startAngle endAngle:startAngle - 360 clockwise:YES];
      [path closePath];
 
-     CGPathRef pathRef = path.CGPath;
-     self.path = pathRef;
-     self.bounds = CGPathGetBoundingBox(pathRef);
+     // Call the category method explicitly: since the macOS 14 SDK,
+     // `path.CGPath` binds to AppKit's own -[NSBezierPath CGPath]
+     // (macOS 14+ only), which raises "unrecognized selector" on 11-13.
+     // quartzPath returns a +1 CGPathRef (Create rule); the layer retains it.
+     CGPathRef pathRef = [path quartzPath];
+     [path release];
+     if(pathRef) {
+         self.path = pathRef;
+         self.bounds = CGPathGetBoundingBox(pathRef);
+         CGPathRelease(pathRef);
+     }
 
      return self;
  }
@@ -140,11 +148,18 @@
      [transform rotateByDegrees: 90];
      [transform translateXBy: -center.x yBy: -center.y];
      [path transformUsingAffineTransform: transform];
-     path = [path bezierPathByReversingPath];
+     [transform release];
+     NSBezierPath* reversed = [path bezierPathByReversingPath]; // autoreleased
+     [path release];
 
-     CGPathRef pathRef = path.CGPath;
-     self.path = pathRef;
-     self.bounds = CGPathGetBoundingBox(pathRef);
+     // See ProgressCircleShapeLayer: call the category method explicitly
+     // (AppKit's CGPath getter is macOS 14+ only); +1 CGPathRef.
+     CGPathRef pathRef = [reversed quartzPath];
+     if(pathRef) {
+         self.path = pathRef;
+         self.bounds = CGPathGetBoundingBox(pathRef);
+         CGPathRelease(pathRef);
+     }
 
      return self;
 }

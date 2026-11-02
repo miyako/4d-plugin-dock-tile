@@ -13,9 +13,11 @@
 
 @interface NSBezierPath (CGPath)
 
-@property (readonly, getter=quartzPath) CGPathRef CGPath ;
-
--(CGPathRef)quartzPath;
+// No `CGPath` property here: AppKit declares its own -[NSBezierPath CGPath]
+// since the macOS 14 SDK (available on macOS 14+ only), and `path.CGPath`
+// would bind to it and fail on macOS 11-13. Call quartzPath explicitly.
+// Returns a +1 CGPathRef (or NULL for an empty path): CGPathRelease it.
+-(CGPathRef)quartzPath CF_RETURNS_RETAINED;
 
 @end
 

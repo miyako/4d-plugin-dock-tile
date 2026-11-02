@@ -18,6 +18,9 @@ void PluginMain(PA_long32 selector, PA_PluginParameters params) {
     
 	try
 	{
+        // DOCK SET PROGRESS / DOCK MENU run on the calling 4D process's
+        // thread, which may have no autorelease pool of its own
+        @autoreleasepool {
         switch(selector)
         {
             case kDeinitPlugin :/* main thread */
@@ -65,6 +68,7 @@ void PluginMain(PA_long32 selector, PA_PluginParameters params) {
             case 10 :
                 DOCK_MENU(params);
                 break;
+        }
         }
 
 	}
@@ -148,17 +152,21 @@ void DOCK_Get_icon(PA_PluginParameters params) {
                                       icon.size.width,
                                       icon.size.height);
         CGImageRef image = [icon CGImageForProposedRect:(NSRect *)&imageRect context:NULL hints:NULL];
-        CFMutableDataRef data = CFDataCreateMutable(kCFAllocatorDefault, 0);
-        CGImageDestinationRef destination = CGImageDestinationCreateWithData(data, kUTTypeTIFF, 1, NULL);
-        CFMutableDictionaryRef properties = CFDictionaryCreateMutable(kCFAllocatorDefault, 0, NULL, NULL);
-        CGImageDestinationAddImage(destination, image, properties);
-        CGImageDestinationFinalize(destination);
-        PA_Picture picture = PA_CreatePicture((void *)CFDataGetBytePtr(data), (PA_long32)CFDataGetLength(data));
-        *(PA_Picture*) pResult = picture;
-        CFRelease(destination);
-        CFRelease(properties);
-        CFRelease(data);
-        
+        if(image) {
+            CFMutableDataRef data = CFDataCreateMutable(kCFAllocatorDefault, 0);
+            if(data) {
+                CGImageDestinationRef destination = CGImageDestinationCreateWithData(data, kUTTypeTIFF, 1, NULL);
+                if(destination) {
+                    CGImageDestinationAddImage(destination, image, NULL);
+                    if(CGImageDestinationFinalize(destination)) {
+                        PA_Picture picture = PA_CreatePicture((void *)CFDataGetBytePtr(data), (PA_long32)CFDataGetLength(data));
+                        *(PA_Picture*) pResult = picture;
+                    }
+                    CFRelease(destination);
+                }
+                CFRelease(data);
+            }
+        }
     }
 
 }
@@ -216,15 +224,21 @@ void DOCK_SET_PROGRESS(PA_PluginParameters params) {
             }
         }
     }
+    // The block retains the NSColor* captured as an object variable, but
+    // not the one stored inside the DrawOptions struct; the colour is
+    // autoreleased on this thread and would be gone before the block runs.
+    NSColor *color = drawOptions.color;
     // change app icon by drawing on it
     dispatch_async(dispatch_get_main_queue(), ^{
+        DrawOptions options = drawOptions;
+        options.color = color;
         if (![NSApp.dockTile.contentView isKindOfClass: [NSImageView class]]) {
-            NSApp.dockTile.contentView = [[NSImageView alloc] init];
+            NSApp.dockTile.contentView = [[[NSImageView alloc] init] autorelease];
         }
         if (progress <= 0 || progress>=1) {
             ((NSImageView *)NSApp.dockTile.contentView).image = NSApp.applicationIconImage;
         } else {
-            ((NSImageView *)NSApp.dockTile.contentView).image = draw(NSApp.applicationIconImage, progress, drawOptions);
+            ((NSImageView *)NSApp.dockTile.contentView).image = draw(NSApp.applicationIconImage, progress, options);
         }
         [NSApp.dockTile display];
     });
@@ -324,6 +338,7 @@ void drawProgressCircle(NSRect dstRect, CGFloat progress, DrawOptions options) {
     progressCircle.lineWidth = options.lineWidth;
     [progressCircle setProgress: progress];
     [progressCircle renderInContext: [NSGraphicsContext.currentContext CGContext]];
+    [progressCircle release];
 }
 
 void drawProgressSquircle(NSRect dstRect, CGFloat progress, DrawOptions options) {
@@ -341,10 +356,16 @@ void drawProgressSquircle(NSRect dstRect, CGFloat progress, DrawOptions options)
     progressSquircle.lineWidth = options.lineWidth;
     [progressSquircle setProgress: progress];
     [progressSquircle renderInContext: [NSGraphicsContext.currentContext CGContext]];
+    [progressSquircle release];
 }
 
-NSImage* draw(NSImage* appIcon, CGFloat progress, DrawOptions options) {
+NSImage* draw(NSImage* appIcon, CGFloat progress, DrawOptions drawOptions) {
+    // The drawing handler runs whenever the image is drawn, possibly long
+    // after this call; capture the colour as an object so the block keeps it.
+    NSColor *color = drawOptions.color;
     return [NSImage imageWithSize:appIcon.size flipped:NO drawingHandler:^BOOL(NSRect dstRect) {
+        DrawOptions options = drawOptions;
+        options.color = color;
         NSGraphicsContext.currentContext.imageInterpolation = NSImageInterpolationHigh;
         [appIcon drawInRect:dstRect];
         switch(options.type) {
