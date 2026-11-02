@@ -213,7 +213,7 @@ DOCK Get icon → icon
 
 ### Description
 
-Returns the current application icon image (`-[NSApplication applicationIconImage]`), encoded as TIFF at the image's nominal size. If the icon cannot be rendered or encoded, the result is an empty picture. (The failure checks were added after release 2.3.0; earlier builds did not check.)
+Returns the current application icon image (`-[NSApplication applicationIconImage]`), encoded as TIFF at the image's nominal size. If the icon cannot be rendered or encoded, the result is an empty picture. (The failure checks were added in 2.4.0; earlier builds did not check.)
 
 ### Example
 
@@ -258,7 +258,7 @@ Draws a progress indicator over the application icon in the Dock. On the first c
 - Values in `options` must be numbers. A missing or non-numeric property uses its default. In `color`, a missing `red`, `green` or `blue` component is `0`.
 - A `style` other than `0`, `1` or `2` draws the icon with no indicator.
 - The Dock tile keeps the plugin's image view after the indicator is cleared, showing a snapshot of the application icon taken at the last call. (Inferred: a later [DOCK SET ICON](#dock-set-icon) may not show in the Dock until the next [DOCK SET PROGRESS](#dock-set-progress) call.)
-- Builds up to release 2.3.0 do not include this command. In builds made with the macOS 14 SDK or later before this repository's fixes, the circle and squircle styles could crash 4D on macOS 11 to 13.
+- Builds up to release 2.3.0 do not include this command. In builds made with the macOS 14 SDK or later before 2.4.0, the circle and squircle styles could crash 4D on macOS 11 to 13.
 
 ### Example
 
