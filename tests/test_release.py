@@ -403,6 +403,38 @@ class PublicationCLITests(GitFixture):
             self.assertEqual(self.calls(), [])
             self.git("update-index", "--no-" + flag, "--", self.generated[0])
 
+    def test_real_fsmonitor_valid_source_and_generated_index_flags_fail_before_api(self):
+        monitor = self.root / "offline-fsmonitor"
+        monitor.write_text(
+            f"#!{sys.executable}\nimport sys\nsys.stdout.buffer.write(b'offline-token\\0')\n"
+        )
+        monitor.chmod(0o755)
+        self.git("config", "core.fsmonitor", str(monitor))
+        self.git("config", "core.fsmonitorHookVersion", "2")
+        for phase, path in (("preflight", str(source.PROJECT)),
+                            ("publish", self.generated[0])):
+            with self.subTest(phase=phase, path=path):
+                if phase == "publish":
+                    expected = self.build()
+                self.git("update-index", "--fsmonitor-valid", "--", path)
+                self.assertEqual(self.git("ls-files", "-v", "--", path), "H " + path)
+                self.assertEqual(self.git("ls-files", "-f", "--", path), "h " + path)
+                result = self.command(phase)
+                self.assertNotEqual(result.returncode, 0, result.stdout)
+                self.assertIn("Hidden index/stat flags", result.stderr)
+                self.assertEqual(self.calls(), [], result.stderr)
+                self.git("update-index", "--no-fsmonitor-valid", "--", path)
+                self.assertEqual(self.git("ls-files", "-f", "--", path), "H " + path)
+                if phase == "publish":
+                    for relative, raw in expected.items():
+                        self.assertEqual((self.local / relative).read_bytes(), raw)
+        self.git("config", "--unset", "core.fsmonitor")
+        self.reset_api()
+        result = self.command("publish")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        for relative, raw in expected.items():
+            self.assertEqual((self.local / relative).read_bytes(), raw)
+
     def test_generated_index_reversal_and_generated_symlinks_fail_before_api(self):
         self.build()
         target = self.local / self.generated[0]

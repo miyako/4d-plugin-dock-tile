@@ -58,9 +58,10 @@ def verify_checkout(sha, *, generated=lambda path: False, assets=(), final=False
     selected_sha(sha)
     selected = entries(run("git", "ls-tree", "-r", "-z", sha, "--"))
     indexed = entries(run("git", "ls-files", "--stage", "-z", "--"), index=True)
-    if any(record and record[0] != "H" for record in
-           run("git", "ls-files", "-v", "-z", "--").split("\0")):
-        raise ValueError("Hidden index/stat flags are unsupported")
+    for flag in ("-v", "-f"):
+        if any(record and record[0] != "H" for record in
+               run("git", "ls-files", flag, "-z", "--").split("\0")):
+            raise ValueError("Hidden index/stat flags are unsupported")
     for path in selected.keys() | indexed.keys():
         if selected.get(path) != indexed.get(path):
             raise ValueError(f"Index source/config differs from selected SHA: {path}")
