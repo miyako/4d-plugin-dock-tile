@@ -9,6 +9,58 @@ Control the Dock tile of the running 4D application on macOS: set or read the ba
 
 Download builds from [Releases](https://github.com/miyako/4d-plugin-dock-tile/releases).
 
+## Release workflows
+
+The two release workflows are independent and manual. **Bump version** takes one
+required `patch`, `minor`, or `major` choice (default `patch`) and commits only
+source version tokens to the selected branch. It never builds, tags, releases,
+or starts Build. The selected event SHA must still be the branch's exact remote
+head, including in the actual push advertisement. Its executable committed
+pre-push guard is mandatory; branch movement or guard replacement fails closed.
+
+**Build** has no custom inputs: use GitHub's built-in ref selector. It reads the
+canonical version from that immutable selected SHA, checks that neither a tag
+nor any draft/published release occupies it, and repeats the check after native
+build, signing, notarization and stapling. Publication is serialized across refs,
+not promised FIFO. Build creates a new `vX.Y.Z` tag at the selected SHA, a new
+public release with empty notes, and only `Dock.Tile-X.Y.Z.zip` and
+`Dock.Tile-X.Y.Z.dmg` (GitHub converts the local filenames' spaces to dots).
+An explicit nonempty `GH_TOKEN`, supplied by the workflow, is required.
+
+Version authority remains `MARKETING_VERSION`, coordinated with the three
+project-level `CURRENT_PROJECT_VERSION` fields and the copied source
+`English.lproj/InfoPlist.strings`. The original Bump header promised this
+coordination, but its implementation updated only marketing fields. The
+migration aligns stale source build/localization tokens to the existing
+**2.4.0**, without incrementing it. Source plist references and the absent build
+key, original encodings/line endings, and committed prebuilt destination metadata
+are preserved. **`v2.4.0` is already published; run Bump version separately before
+the first new Build.** Existing tags/releases are never reused or overwritten.
+
+Native behavior remains macOS-only: Default configuration, deployment target
+11.5, arm64 and x86_64 required, executable i386 rejected, and the original
+runtime-dylib architecture checks retained. The committed Windows64 stub and
+QuickLook resource ship unchanged; there is no Windows build. The Deployment-only
+custom signing phase remains unchanged and is inactive in Default. Only exact
+generated leaves/intermediates are cleaned; packaged siblings and resources are
+not recursively deleted. Final checks retain fresh outputs, verify built metadata
+and exact copied resources, and require every packaged generated leaf (including
+the executable and signature) to be a nonempty regular nonsymlink file.
+
+API, authentication, malformed responses, races, native, notary, staple or output
+validation failures stop publication. A failed create/upload can leave a tag,
+release or assets behind: inspect the reported retained IDs and exact selected
+SHA manually. There is no automatic retry, rollback, deletion, update or clobber.
+Do not rerun an occupied version expecting it to repair a partial release; resolve
+that state explicitly or make a separate source bump and Build. The offline
+regressions use real local Git/bare remotes and closed-PATH native/credential/API
+doubles, not real Apple services or 4D:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+actionlint
+```
+
 | Command | Returns | Purpose |
 |---|---|---|
 | [DOCK SET BADGE](#dock-set-badge) | — | Set or clear the badge label on the Dock icon |
