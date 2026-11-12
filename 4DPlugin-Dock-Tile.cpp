@@ -221,6 +221,8 @@ void DOCK_SET_PROGRESS(PA_PluginParameters params) {
                     a = 1;
                 }
                 drawOptions.color = [NSColor colorWithRed:r green:g blue:b alpha:a];
+                // ob_get_o returns an owned reference
+                PA_DisposeObject(optionColor);
             }
         }
     }

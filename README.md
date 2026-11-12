@@ -90,6 +90,7 @@ actionlint
 - **The badge is removed when the plugin is unloaded** (when 4D quits).
 - **Main-process execution.** [DOCK SET BADGE](#dock-set-badge), [DOCK Get badge](#dock-get-badge), [DOCK Bounce](#dock-bounce), [DOCK CANCEL BOUNCE](#dock-cancel-bounce), [DOCK SET ICON](#dock-set-icon), [DOCK Get icon](#dock-get-icon), [DOCK GET SIZE](#dock-get-size) and [DOCK GET SCREEN FRAME](#dock-get-screen-frame) run their work in 4D's main process and return when it is done. [DOCK SET PROGRESS](#dock-set-progress) and [DOCK MENU](#dock-menu) schedule their work on the main thread and return immediately.
 - **Thread safety.** `manifest.json` declares every command thread-safe. Calling the main-process commands above from a preemptive process has not been verified.
+- **Value ownership.** The JSON helpers in `4DPlugin-JSON.cpp` release every value that `PA_GetObjectProperty` returns, but only when the call succeeded. `ob_get_o` and `ob_get_c` hand their reference to the caller, who must release it. `tests/ownership/run.sh` checks this with a synthetic 4D engine and ASan/UBSan, without touching the Dock.
 - **No 4D errors.** No command raises a 4D error. Failures are silent: an empty result, or nothing happens.
 - **Attention constants.** The plugin defines the constant theme *Dock Bounce Option*:
 
